@@ -14,7 +14,7 @@
 
   // Function to perform when event is received
   function performCommand(event) {
-  	  window.alert(event.command);
+  	  //window.alert(event.command);
       if (event.command == "viewOnMorfix") {
       	safari.application.activeBrowserWindow.activeTab.page.dispatchMessage('getSelection');
       }
@@ -22,12 +22,10 @@
 
   function handleMessage(msg) {
       if (msg.name === 'theSelection') {
-          console.log("Message: "+msg.message);
          	var selectedText = msg.message.trim();
           if(selectedText.length>1) {
          	  var url = "http://www.morfix.co.il/"+selectedText+"/";
             var newTab;
-            console.log();
             if (safari.extension.settings.ShowInNewTab == true) {
               newTab = safari.application.activeBrowserWindow.openTab();
       		  }
