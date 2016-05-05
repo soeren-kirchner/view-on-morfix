@@ -16,7 +16,7 @@
 		<key>Secure</key>
 		<false/>
 		<key>Title</key>
-		<string>Open new Tab intead of new Window</string>
+		<string>Open new Window intead of new Tab</string>
 		<key>Type</key>
 		<string>CheckBox</string>
 	</dict>

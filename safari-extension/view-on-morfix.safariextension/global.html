@@ -26,7 +26,10 @@
           if(selectedText.length>1) {
          	  var url = "http://www.morfix.co.il/"+selectedText+"/";
             var newTab;
-            if (safari.extension.settings.ShowInNewTab == true) {
+
+            //window.alert(safari.extension.settings.TabOrWindowKey);
+
+            if (safari.extension.settings.TabOrWindowKey == true) {
               newTab = safari.application.activeBrowserWindow.openTab();
       		  }
             else {
